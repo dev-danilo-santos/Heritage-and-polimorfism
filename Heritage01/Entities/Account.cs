@@ -8,7 +8,7 @@ namespace Heritage01.Entities
 {
     class Account
     {
-        public int Number { get; private set; }
+        public int Number { get; protected set; }
         public string Holder { get; set; }
         public double Balance { get; protected set; }
         
@@ -24,10 +24,10 @@ namespace Heritage01.Entities
 
         }
 
-        public void Withdraw(double value) 
+        public virtual void Withdraw(double value) 
         {
             if (value <= Balance && value > 0) {
-                Balance -= value;
+                Balance -= value + 5;
                 Console.WriteLine($"Withdray {value}");
             }
             else if (value < 0) { Console.WriteLine("The value it can not be negative! "); }

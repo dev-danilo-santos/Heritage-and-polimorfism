@@ -22,7 +22,7 @@ namespace Heritage01.Entities
         public void Loan(double amount)
         {
             if (amount<= LoanLimit) { base.Balance += amount; }
+            else { Console.WriteLine($"Refused, your limit is {LoanLimit}"); }
         }
-
     }
 }
