@@ -24,7 +24,7 @@ namespace Heritage01.Entities
             Balance += Balance * InterestRate;
         }
 
-        public override void Withdraw(double value)
+        public sealed override void Withdraw(double value)
         {
             if (value <= Balance && value > 0)
             {

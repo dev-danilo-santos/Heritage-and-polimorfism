@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Heritage01.Entities
 {
-    class BusinessAccount : Account
+        sealed class BusinessAccount : Account
     {
         public double LoanLimit { get; set; }
         
